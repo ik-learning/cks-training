@@ -13,6 +13,7 @@
 ### Udemy
 
 - [CKS Specialist 2022](https://www.udemy.com/course/certified-kubernetes-security-specialist-certification/learn/lecture/23707866?start=0#overview)
+  * [Github Source Repository](https://github.com/zealvora/certified-kubernetes-security-specialist)
 
 ### Other
 
