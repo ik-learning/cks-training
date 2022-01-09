@@ -22,6 +22,7 @@ cd udemy
 vagrant up
 vagrant ssh master-1
 vagrant status
+vagrant reload --provision
 ```
 
 ### Other

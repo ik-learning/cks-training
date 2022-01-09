@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
 
         # node.vm.provision "setup-dns", type: "shell", :path => "ubuntu/update-dns.sh"
         # node.vm.provision "file", source: "./ubuntu/cert_verify.sh", destination: "$HOME/"
-
+          node.vm.provision "setup-tools", type: "shell", privileged: true, :path => "centos/setup.sh"
       end
   end
 
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
     node.vm.network :private_network, ip: IP_NW + "#{LB_IP_START}"
 	node.vm.network "forwarded_port", guest: 22, host: 2730
 
-    node.vm.provision "setup-hosts", :type => "shell", :path => "ubuntu/vagrant/setup-hosts.sh" do |s|
+    node.vm.provision "setup-hosts", :type => "shell", :path => "centos/setup-hosts.sh" do |s|
       s.args = ["enp0s8"]
     end
 
